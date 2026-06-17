@@ -25,6 +25,53 @@ namespace learncs
             string[] fruits = { "Apple", "Banana", "Orange" };
 
             string[] cars = new string[3];
+            cars[0] = "BMW";
+            cars[1] = "Audi";
+
+            List<int> list = new List<int>();
+
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+
+            int age = 20;
+            if (age >= 18)
+            {
+                Console.WriteLine("You are an adult.");
+            }
+            else
+            {
+                Console.WriteLine("You are a minor.");
+            }
+
+            char grade = 'A';
+            switch (grade)
+            {
+                case 'A':
+                    Console.WriteLine("Excellent!");
+                    break;
+                case 'B':
+                    Console.WriteLine("Good!");
+                    break;
+                case 'C':
+                    Console.WriteLine("Average!");
+                    break;
+                case 'D':
+                    Console.WriteLine("Below Average!");
+                    break;
+                default:
+                    Console.WriteLine("Invalid grade.");
+                    break;
+            }
+
+            for (int i = 0; i < fruits.Length; i++)
+            {
+                Console.WriteLine(fruits[i]);
+            }
+
+            foreach (string car in cars)
+            {
+                Console.WriteLine(car);
+            }
+            
         }
     }
 }
