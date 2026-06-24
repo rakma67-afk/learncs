@@ -96,6 +96,46 @@ namespace learncs
             }
 
             Console.WriteLine( NumberCompare(10, 20));
+
+            List<player> players = new List<player>();
+            for (int i = 0; i < 3; i++)
+            {
+                players.Add(new player());
+                
+                players[i].Name = $"Player {i + 1}";
+                players[i].Leveled = 1;
+                Console.WriteLine($"Name: {players[i].Name}, Level: {players[i].Leveled}");
+            }
+
+            players.Add(new player());
+            Console.WriteLine($"Name: {players[3].Name}, Level: {players[3].Leveled}");
+
+        }
+
+    }
+
+    class player
+    {
+        string name;
+        int leveled;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Leveled
+        {
+            get { return leveled; }
+            set { leveled = value; }
+        }
+
+        // Constructor
+        public player()
+        {
+            name = "Unknown";
+            leveled = 1;
         }
     }
 }
